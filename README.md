@@ -45,5 +45,5 @@ Suivez ces étapes pour lancer le projet sur votre machine :
 ### 1. Cloner le dépôt
 Ouvrez votre terminal et tapez :
 ```bash
-git clone [https://github.com/VOTRE_NOM_UTILISATEUR/tp-react-events-starter.git](https://github.com/VOTRE_NOM_UTILISATEUR/tp-react-events-starter.git)
+git clone https://github.com/wassimati/tp-react-events-starter
 cd tp-react-events-starter

@@ -1,16 +1,49 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <h1>🖼️ React Events Workshop: Windows 11 Gallery</h1>
+  
+  <p>
+    <strong>Un TP immersif pour maîtriser les événements React dans une interface style "OS".</strong>
+  </p>
 
-Currently, two official plugins are available:
+  <p>
+    <a href="https://react.dev/">
+      <img src="https://img.shields.io/badge/React-18-blue?logo=react&style=for-the-badge" alt="React" />
+    </a>
+    <a href="https://vitejs.dev/">
+      <img src="https://img.shields.io/badge/Vite-Fast-purple?logo=vite&style=for-the-badge" alt="Vite" />
+    </a>
+    <a href="#">
+      <img src="https://img.shields.io/badge/Level-Intermediate-orange?style=for-the-badge" alt="Level" />
+    </a>
+  </p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  <br />
+</div>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📋 À propos du projet
 
-## Expanding the ESLint configuration
+Bienvenue dans ce **Starter Pack** ! 
+Votre mission est de donner vie à cette interface statique. Le design (CSS) est déjà prêt et simule un bureau Windows 11 avec effet "Glassmorphism". 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Cependant, **rien ne fonctionne** : les clics ne font rien, la galerie ne s'ouvre pas et la fenêtre ne réagit pas. C'est à vous de coder la logique !
+
+### 🎯 Ce que vous allez apprendre :
+- ✅ **Gestion du State** : Ouvrir et fermer des fenêtres modales.
+- ✅ **Événements Souris** : `onClick`, et le suivi `onMouseMove`.
+- ✅ **Propagation** : Comprendre et utiliser `e.stopPropagation()`.
+- ✅ **Cycle de Vie** : Gérer les événements globaux (`window`) avec `useEffect`.
+
+---
+
+## 🚀 Installation & Démarrage
+
+Suivez ces étapes pour lancer le projet sur votre machine :
+
+### 1. Cloner le dépôt
+Ouvrez votre terminal et tapez :
+```bash
+git clone [https://github.com/VOTRE_NOM_UTILISATEUR/tp-react-events-starter.git](https://github.com/VOTRE_NOM_UTILISATEUR/tp-react-events-starter.git)
+cd tp-react-events-starter

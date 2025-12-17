@@ -1,0 +1,149 @@
+/* Reset & Font */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden; /* Pas de scroll global */
+  background: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* --- Le Bureau (Desktop) --- */
+.desktop {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* --- La Fenêtre (Window) --- */
+.window-container {
+  width: 800px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent */
+  backdrop-filter: blur(12px); /* Effet verre dépoli style Win 11 */
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  animation: popIn 0.3s ease-out;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+@keyframes popIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Header de la fenêtre */
+.window-header {
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  border-radius: 10px 10px 0 0;
+}
+
+.window-title { font-size: 13px; font-weight: 600; color: #333; }
+.window-controls span {
+  display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-left: 8px;
+}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+/* Contenu de la galerie */
+.window-body {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Les miniatures */
+.thumbnail {
+  width: 180px;
+  height: 120px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
+}
+.thumbnail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-color: #0078d4;
+}
+.thumbnail img { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- Barre des tâches (Taskbar) --- */
+.taskbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(243, 243, 243, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Logo Windows CSS pur */
+.win-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.win-logo:hover { transform: scale(1.1); }
+.win-square { background-color: #0078d4; width: 100%; height: 100%; }
+
+/* --- LIGHTBOX (MODALE) --- */
+.lightbox-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* Le texte qui suit la souris */
+.mouse-tracker {
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none; /* Important pour que la souris passe au travers */
+  z-index: 2000;
+  transform: translate(15px, 15px);
+}
